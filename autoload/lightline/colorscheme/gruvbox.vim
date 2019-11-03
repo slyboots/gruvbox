@@ -21,11 +21,13 @@ if exists('g:lightline')
   let s:fg1  = s:getGruvColor('GruvboxFg1')
   let s:fg4  = s:getGruvColor('GruvboxFg4')
 
-  let s:yellow = s:getGruvColor('GruvboxYellow')
-  let s:blue   = s:getGruvColor('GruvboxBlue')
-  let s:aqua   = s:getGruvColor('GruvboxAqua')
-  let s:orange = s:getGruvColor('GruvboxOrange')
-  let s:green = s:getGruvColor('GruvboxGreen')
+  let s:yellow  = s:getGruvColor('GruvboxYellow')
+  let s:blue    = s:getGruvColor('GruvboxBlue')
+  let s:aqua    = s:getGruvColor('GruvboxAqua')
+  let s:orange  = s:getGruvColor('GruvboxOrange')
+  let s:green   = s:getGruvColor('GruvboxGreen')
+  let s:red     = s:getGruvColor('GruvboxRed')
+  let s:purple  = s:getGruvColor('GruvboxPurple')
 
   let s:p = {'normal':{}, 'inactive':{}, 'insert':{}, 'replace':{}, 'visual':{}, 'tabline':{}, 'terminal':{}}
   let s:p.normal.left = [ [ s:bg0, s:fg4, 'bold' ], [ s:fg4, s:bg2 ] ]
@@ -47,9 +49,11 @@ if exists('g:lightline')
   let s:p.visual.right = [ [ s:bg0, s:orange ], [ s:bg0, s:bg4 ] ]
   let s:p.visual.middle = [ [ s:fg4, s:bg1 ] ]
   let s:p.tabline.left = [ [ s:fg4, s:bg2 ] ]
-  let s:p.tabline.tabsel = [ [ s:bg0, s:yellow, 'bold' ] ]
-  let s:p.tabline.middle = [ [ s:bg0, s:bg0 ] ]
-  let s:p.tabline.right = [ [ s:bg0, s:orange ] ]
+  let s:p.tabline.tabsel = [ [ s:bg0, s:green, 'bold' ] ]
+  let s:p.tabline.middle = [ [ s:aqua, s:bg0 ] ]
+  let s:p.tabline.right = [ [ s:bg0, s:orange ], [ s:bg0, s:blue ] ]
+  let s:p.tabline.error = [ [ s:bg0, s:red ] ]
+  let s:p.tabline.warning = [ [ s:bg2, s:purple ] ]
   let s:p.normal.error = [ [ s:bg0, s:orange ] ]
   let s:p.normal.warning = [ [ s:bg2, s:yellow ] ]
 
